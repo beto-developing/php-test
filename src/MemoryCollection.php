@@ -16,6 +16,10 @@ class MemoryCollection implements CollectionInterface
      */
     protected $data;
 
+    protected $metadata;
+
+    const T_EXPIRATION = 1;
+
     /**
      * Constructor
      */
@@ -33,15 +37,15 @@ class MemoryCollection implements CollectionInterface
             return $defaultValue;
         }
 
-        return $this->data[$index];
+        return $this->data[$index]['value'];
     }
 
     /**
      * {@inheritDoc}
      */
-    public function set(string $index, $value)
+    public function set(string $index, $value, $tExpiration = 0)
     {
-        $this->data[$index] = $value;
+        $this->data[$index] = array('value'=> $value, 'tExpiration'=> $tExpiration);
     }
 
     /**
@@ -57,7 +61,7 @@ class MemoryCollection implements CollectionInterface
      */
     public function count(): int
     {
-        return count($this->data) + 1;
+        return count($this->data); 
     }
 
     /**
@@ -67,4 +71,6 @@ class MemoryCollection implements CollectionInterface
     {
         $this->data = [];
     }
+
+
 }

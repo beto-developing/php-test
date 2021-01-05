@@ -36,6 +36,8 @@ class FileCollection extends MemoryCollection
 
     /**
      * Open File
+     * 
+     * {@inheritDoc}
      */
     public function openFile($fileName)
     {
@@ -66,6 +68,8 @@ class FileCollection extends MemoryCollection
 
     /**
      * Write File
+     * 
+     * {@inheritDoc}
      */
     public function writeFile()
     {
@@ -83,6 +87,8 @@ class FileCollection extends MemoryCollection
 
     /**
      * Insert Data on Collection
+     * 
+     * {@inheritDoc}
      */
     public function insertData($string)
     {
@@ -92,6 +98,8 @@ class FileCollection extends MemoryCollection
 
     /**
      * Function that execute the program
+     * 
+     * {@inheritDoc}
      */
     public function execute($filepath)
     {
@@ -123,6 +131,8 @@ class FileCollection extends MemoryCollection
 
     /**
      * Constructor
+     * 
+     * {@inheritDoc}
      */
     public function __construct()
     {

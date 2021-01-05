@@ -16,10 +16,6 @@ class MemoryCollection implements CollectionInterface
      */
     protected $data;
 
-    protected $metadata;
-
-    const T_EXPIRATION = 1;
-
     /**
      * Constructor
      */

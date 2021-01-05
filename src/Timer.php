@@ -8,6 +8,10 @@ namespace Live\Collection;
  */
 class Timer
 {
+    /**
+     * Adds a Data Expiration for data collection
+     *
+     */
     public function date(int $day = 0, int $month = 0, int $year = 0, int $hour = 0, int $minute = 0, int $second = 0)
     {
         $tempo = date("Y-m-d H:i:s");
